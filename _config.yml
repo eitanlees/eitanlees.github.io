@@ -26,6 +26,7 @@ twitter_username: eitanlees
 github_username: eitanlees
 
 google_analytics: UA-77807375-2
+show_excerpts: true
 
 disqus:
     shortname: eitanlees-github-io
