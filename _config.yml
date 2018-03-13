@@ -21,9 +21,9 @@ description: >- # this means to ignore newlines until "baseurl:"
   Florida State University. I enjoy data visualization, 
   open science, and programming.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+url: https://eitanlees.github.io # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: eitanlees
-github_username:  eitanlees
+github_username: eitanlees
 
 
 # Disqus Comments
