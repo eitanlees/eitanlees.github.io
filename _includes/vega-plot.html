@@ -1,0 +1,6 @@
+<div id="{{include.name}}" align="center"></div>
+
+<script type="text/javascript">
+    var spec = {{ include.spec }};
+    vegaEmbed('#{{include.name}}', spec, {"actions":false}).then(function(result){}).catch(console.error);
+</script>
