@@ -4,3 +4,4 @@ _site
 
 # Jupyter Notebook
 .ipynb_checkpoints
+.nbgrader.log
