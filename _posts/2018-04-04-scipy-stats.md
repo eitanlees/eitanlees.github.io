@@ -4,6 +4,8 @@ title : Scipy Stats
 permalink: /scipy-stats/
 ---
 
+![stats-header](/assets/images/stats-header.svg)
+
 I recently was the TA for a [Monte Carlo methods](https://en.wikipedia.org/wiki/Monte_Carlo_method) course which involved sampling many statistical distributions. Often students would write standalone functions to draw samples which was prone to error. While knowing how to code up an exotic distribution can be useful, I encourage students not to re-invent the wheel every assignment. The `scipy.stats` package contains many probability distributions and useful functions when doing statitics. 
 
 
