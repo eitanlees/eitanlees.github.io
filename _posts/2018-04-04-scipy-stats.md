@@ -6,7 +6,7 @@ permalink: /scipy-stats/
 
 ![stats-header](/assets/images/stats-header.svg)
 
-I recently was the TA for a [Monte Carlo methods](https://en.wikipedia.org/wiki/Monte_Carlo_method) course which involved sampling many statistical distributions. Often students would write standalone functions to draw samples which was prone to error. While knowing how to code up an exotic distribution can be useful, I encourage students not to re-invent the wheel every assignment. The `scipy.stats` package contains many probability distributions and useful functions when doing statitics. 
+I recently was the TA for a [Monte Carlo methods](https://en.wikipedia.org/wiki/Monte_Carlo_method) course which involved sampling many statistical distributions. Often students would write standalone functions to draw samples which was prone to error. While knowing how to code up an exotic distribution can be useful, I encourage students not to re-invent the wheel every assignment. The `scipy.stats` package contains many probability distributions and useful functions when doing statistics. 
 
 
 ```python
@@ -32,12 +32,12 @@ All statistical distribution objects in `scipy.stats` package contain useful met
 - `pdf(x)` to calculate the Probability density function at x.
 - `cdf(x)` to calculate the Cumulative distribution function at x.
 - `interval(alpha)` to calculate the endpoints of the range that contains alpha percent of the distribution
-- `rvs(size)` to generate random variates of abitrary size.
+- `rvs(size)` to generate random variates of arbitrary size.
 - `fit(data)` to estimate the parameters for generic data.
 
 and many more
 
-The `stats.norm` class by default creates a standard normal distribution with mean 0 and varience of 1. 
+The `stats.norm` class by default creates a standard normal distribution with mean 0 and variance of 1. 
 
 
 ```python
@@ -77,9 +77,9 @@ plt.tight_layout()
 ![svg](/notebooks/scipy-stats_files/scipy-stats_6_0.svg)
 
 
-### Location and Shape Parameteres
+### Location and Shape Parameters
 
-We can pass to the distribution object a parameter `loc` which controls the mean and `scale` which controls the standard deviation. Lets create a variety of distributions by varying these paramerters
+We can pass to the distribution object a parameter `loc` which controls the mean and `scale` which controls the standard deviation. Lets create a variety of distributions by varying these parameters
 
 
 ```python
@@ -189,7 +189,7 @@ plt.hist(samples, bins=50);
 
 **Numpy Random**
 
-If you are only interested in random variate samples sometimes it is easier to use the `numpy.random` modul ([See numpy docs](https://docs.scipy.org/doc/numpy/reference/routines.random.html)) which also contains many distributions. By setting the seed we can create the same results as above
+If you are only interested in random variate samples sometimes it is easier to use the `numpy.random` module ([See numpy docs](https://docs.scipy.org/doc/numpy/reference/routines.random.html)) which also contains many distributions. By setting the seed we can create the same results as above
 
 
 ```python
@@ -244,7 +244,7 @@ plt.title("Fit: $\mu$ = {:.2f},  $\sigma$ = {:.2f}".format(mu, std));
 
 
 ### Shaded Distributions
-A common visualization is a shaded normal distribution to highlight the tails. Let's take the fitted ditribution from the previous example and fill in the 95% cofidence regions. I made a simple `fill_dist` function to aid in the task.
+A common visualization is a shaded normal distribution to highlight the tails. Let's take the fitted distribution from the previous example and fill in the 95% confidence regions. I made a simple `fill_dist` function to aid in the task.
 
 
 ```python
@@ -288,7 +288,7 @@ $$
 P(x) = {\frac {1}{2^{k/2}\Gamma (k/2)}}\;x^{\frac {k}{2}-1}e^{-{\frac {x}{2}}}
 $$
 
-Often it can be useful to vary a shape parameter and see how it affects the distribution. for example
+Often it can be useful to vary a shape parameter and see how it affects the distribution. For example
 
 
 ```python
@@ -440,6 +440,6 @@ plt.contourf(x, y, pi(np.dstack((X, Y))), cmap='coolwarm')
 
 ## Conclusion
 
-Sampling and exploring a wide variety of statistical distributions is made easier with the `scipy.stats` module. Creating your own functions each time you want to draw a sample is error prone and ineffient. I think it's important to know what tools are available and I hope this post shines some light on one useful example. 
+Sampling and exploring a wide variety of statistical distributions is made easier with the `scipy.stats` module. Creating your own functions each time you want to draw a sample is error prone and inefficient. I think it's important to know what tools are available and I hope this post shines some light on one useful example. 
 
 I hope to do more `scipy` related posts in the future. 

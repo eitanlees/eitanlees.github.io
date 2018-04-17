@@ -61,7 +61,7 @@ print(coeff)
     [ 0.94969091 -5.707748    8.46536612]
 
 
-The coefficients are returned from highest to lowest power (**note**: The order of the coefficients is imporant). We can now use these coefficients to evaluate the polynomial.
+The coefficients are returned from highest to lowest power (**note**: The order of the coefficients is important). We can now use these coefficients to evaluate the polynomial.
 
 
 ```python
@@ -80,7 +80,7 @@ plt.plot(xp, p2(xp), color='C2')
 
 ## WAIT!!!
 
-While what we have done has worked there is a flaw in our method. By handcrafting the polynomial function we have lost flexibility. If I want a 7th degree fit then we waste lots of time writing up a 7th degree polynomial function and introduce the possiblity for errors. The `np.poly1d` function creates polynomial functions from the list of coefficients directly. Here the order matters and luckily `np.poly1d` expects the polynomial’s coefficients in decreasing powers which is exactly what `np.polyfit` returns. Lets create that 7th order polynomial fit
+While what we have done has worked there is a flaw in our method. By handcrafting the polynomial function we have lost flexibility. If I want a 7th degree fit then we waste lots of time writing up a 7th degree polynomial function and introduce the possibility for errors. The `np.poly1d` function creates polynomial functions from the list of coefficients directly. Here the order matters and luckily `np.poly1d` expects the polynomial’s coefficients in decreasing powers which is exactly what `np.polyfit` returns. Lets create that 7th order polynomial fit
 
 
 ```python
