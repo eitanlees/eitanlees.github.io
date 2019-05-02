@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Welcome to Jekyll!"
+title:  "Boiler Plate Draft"
 date:   2018-03-11 19:20:18 -0400
 categories: jekyll update
 ---
