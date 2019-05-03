@@ -1,14 +1,172 @@
 ---
 layout: post
 title: Dot Files
-date: 2019-04-20
+date: 2019-05-03
 ---
 
-Recently I rebooted my configuration files and wanted to document the process
+![telegraph](/assets/images/telegraphkey.gif)
+
+Recently I rebooted my configuration files and wanted to document the process. 
+
+## The Goal
+
+I would like a set up that is portable, concise, and version controlled. The dream is I
+can sit down at a new machine, clone my dot files, and be up an running quickly.
+
+## Why Now
+
+Over the past few months I have been experimenting with different editors to
+get a feel of what other options are out there. I gave Emacs another concerted
+effort as well as the Spacemacs distribution. VScode and Atom were also
+explored as options for more IDE like experiences. I found I was very stunted
+without vim keybindings for text navigation. I am completely brainwashed by
+modal editing. Many editors have a vim mode which was great, but then I had to
+figure out how to implement my own custom key maps to match my `.vimrc`. This
+became a real pain switching between editors and having to configure each one.
+
+The root of the problem stems from the configuration that went into my
+original `.vimrc`. I went overboard with remapping keys and setting lots of
+options. I think early on I was too quick to add a convenient remap than
+learning how it's done the default way.  Many packages were also installed
+using Tim Popes `pathogen.vim` which was convent at the time. I stuck with
+pathogen for many years but found myself wanting more out of my vim package
+manager. 
+
+I figured it was time to start fresh!
+
+## Burn It All Down
+![campfire](/assets/images/campfire.gif)
+
+I wanted to clean up my vim configuration as well as my terminal set up. I have
+been using zsh for many years now as a drop in replacement for bash.  I moved
+my `.vimrc` and `.zshrc` to a back up folder in case this experiment went
+sideways. 
+
+I set up a folder called `dotfiles` which contains a bash script that symlink's 
+the configurations into the root directory. I like this setup because I can easily 
+version control all of my configurations.
 
 
-Things I would like to include in this post:
-- moving to vim plug
-- resetting oh-my-zsh/zsh
-- avoiding over configuration
+### Vim Configuration
+
+
+- For a package manager I went with [vim-plug](https://github.com/junegunn/vim-plug) a "Minimalist Vim Plugin
+  Manager". To install packages it is as simple as listing the plugins between begin and end.
+```
+" Plugins will be downloaded under the specified directory.
+call plug#begin('~/.vim/plugged')
+```
+- What is a `.vimrc` without some packages by
+  [Tim Pope](https://github.com/tpope)!  I tried not to go crazy. The
+  [vim-sensible](https://github.com/tpope/vim-sensible) package is a set of
+  universal defaults that most people agree on. I also love his
+  [vim-commentary](https://github.com/tpope/vim-commentary) package for quickly
+  commenting lines. Pope's packages are written in a way that they feel like
+  part of base vim, and less like a hack. 
+```
+" Tim Pope writes essential plugins
+Plug 'tpope/vim-sensible'
+Plug 'tpope/vim-commentary'
+```
+- For colors I have been using the [badwolf](https://github.com/sjl/badwolf/)
+  color scheme for many years and I still love it. I recently found out that it
+  also comes with a goodwolf color scheme which is a minimal take on color. 
+```
+" Steve Losh makes pretty things
+Plug 'sjl/badwolf'
+```
+- I was interested in using some snippets so I went with [utilsnips](https://github.com/SirVer/ultisnips) as the
+  engine and [vim-snippets](https://github.com/honza/vim-snippets) as the catalog.
+```
+" A snippet engine and snippet catalog
+Plug 'SirVer/ultisnips'
+Plug 'honza/vim-snippets'
+```
+- I have been editing lots of tex files recently so I install
+  [vimtex](https://github.com/lervag/vimtex) to better handle latex specific problems
+```
+" Latex plugin
+Plug 'lervag/vimtex'
+```
+
+- Close out the vim-plug command 
+```
+" Plugins become visible to Vim after this call.
+call plug#end()
+```
+
+
+- Set up the color
+```
+colorscheme badwolf
+```
+- I messed around with the tabs. I don't know where I fall on the _tabs
+  vs. spaces_ debate but at the moment spaces are taking precedent.
+```
+" show existing tab with 4 spaces width
+set tabstop=4
+" when indenting with '>', use 4 spaces width
+set shiftwidth=4
+" On pressing tab, insert 4 spaces
+set expandtab
+```
+
+- Again I have been editing a lot of tex these days so I set up vim to assume I
+  will always be editing LaTeX files instead of plain TeX. 
+```
+" Vim defaults to plaintex. I only ever write LaTeX
+let g:tex_flavor = "latex"
+```
+
+I am keeping an eye on things getting out of control, but right now things are feeling good.
+
+### Zsh Configuration
+I have been please with the
+[oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh) library of packages and
+configuration
+options.
+
+- For a theme I went with
+  [avit](https://github.com/robbyrussell/oh-my-zsh/wiki/Themes#avit) which was
+  already very similar. 
+```
+ZSH_THEME="avit"
+```
+- The git package came already installed and I added autojump for better navigation.
+```
+plugins=(git autojump)
+```
+- I set my default editor to vim 
+```
+export EDITOR='vim'
+```
+- I added a couple of lines to get my conda environment working correctly
+```
+. /Users/eitanlees/miniconda3/etc/profile.d/conda.sh
+conda activate
+```
+
+- Finally there were a few aliases I have found convenient. The latex related ones just output
+all generated files to a folder `tmp` rather than in the current directory. The `lock` alias is 
+mac specific, so I can quickly lock my computer from the terminal. I think I could live without 
+the clear alias, so it's on the short list to be cut. 
+```
+alias c='clear'
+alias pdflatex='mkdir -p tmp; pdflatex -output-directory tmp'
+alias latexmk='mkdir -p tmp; latexmk -pdf -outdir=tmp'
+alias lock='/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend'
+```
+
+
+## Moving Forward
+
+I hope that I can reign in the desire to go overboard with configuration. I
+still haven't created a `.bashrc` yet. Since bash is by far the most common
+shell I encounter in the wild, I should have a minimal configuration at hand.
+
+I am keeping all my dotfiles on github 
+([eitanlees/dotfiles](https://github.com/eitanlees/dotfiles)) and they are likely to 
+change in the future.
+
+Best of luck future Eitan!
 
