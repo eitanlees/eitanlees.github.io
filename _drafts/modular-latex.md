@@ -21,6 +21,30 @@ Links:
 
 I mostly referred to [LaTeX/Modular Documents](https://en.wikibooks.org/wiki/LaTeX/Modular_Documents)
 
+What I would like in a latex document. 
+
+- A main file to handle macro document structure
+- Separate style file
+- A bibliography which is flexible
+- Source code for figures
+
 ## File Structure
 
 ![filecabinet](/assets/images/filecabinet.gif)
+
+```
+├── LICENSE
+├── Makefile
+├── README.md
+├── fig
+│   ├── figure-A.tex
+│   ├── figure-B.tex
+│   └── figure-C.tex
+├── main.bib
+├── main.sty
+├── main.tex
+└── tex
+    ├── section-A.tex
+    ├── section-B.tex
+    └── section-C.tex
+```
