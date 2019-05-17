@@ -1,8 +1,6 @@
 ---
 layout: post
 title:  Modular Latex
-date:   2019-05-17
-permalink: /modular-latex/
 categories: latex
 ---
 
