@@ -5,6 +5,8 @@ date:   2019-09-26
 categories: latex tikz figures
 ---
 
+![](/assets/images/tikz_figures/intro-linear-interpolation.png)
+
 In the previous post I discussed my strategy for building a large modular latex
 project.  I realized I never shared any of the actual work I did.  I was the TA
 for a course called [ISC-4933: Iterative and Direct Solvers for Linear
@@ -24,9 +26,6 @@ page](https://github.com/eitanlees/ISC-4933) also. For the motivation and
 context surrounding the figure you will have to reference the full text.
 
 Without further delay, all the figures!
-
-## Introduction to Linear Systems
-![](/assets/images/tikz_figures/intro-linear-interpolation.png)
 
 ## Geometric Multi Grid
 ![](/assets/images/tikz_figures/gmg-2d-domain.png)
