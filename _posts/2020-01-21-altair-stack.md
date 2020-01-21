@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Understanding The Altair Stack"
-date:  2020-01-18 
+date:  2020-01-21
 categories: altair visualization python
 permalink: /altair-stack/
 ---
