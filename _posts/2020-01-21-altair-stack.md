@@ -28,7 +28,7 @@ friends and family, I have come across a few similar questions:
 While tweaking font size is mostly a matter of knowing (or looking up) the
 correct keyword to modify, I think having a solid understanding of the
 software stack which Altair interacts with is important. The tools involved could be
-visualize as follows:
+visualized  as follows:
 
 <img
     src="/assets/images/vega-stack/01-d3-vega-stack.svg"
@@ -42,7 +42,7 @@ JavaScript and web related paradigms.
 I have tried both a top down (Altair &rarr; VL &rarr; Vega &rarr; D3 &rarr; JS)
 and bottom up approach when explaining how the tools interact. I am unsure which
 explanation is more effective, but in my experience I am usually talking to
-Python developers, and take to top down approach. 
+Python developers, and take a top down approach. 
 
 <h3><img src="/assets/images/vega-stack/altair-logo.svg" height="40" /> <b>Altair</b>: Declarative Visualization in Python</h3>
 Altair is a little different than other visualization packages in the Python
@@ -79,13 +79,13 @@ colleagues.
 
 So back to the story, the JSON which Altair produces is a Vega-Lite spec. The
 spec is a JSON file which describes the visualization using a high-level
-visualization grammar. It is considered high level because some useful default
+visualization grammar. It is considered high level because some useful defaults
 are assumed. For instance, Vega-Lite will automatically produce appropriate
-scales and legends rather than you having to specify every component of your
+scales and legends rather than having you specify every component of your
 visualization. 
 
 Understanding the visualization grammar is <b>critical</b> in knowing what Vega-Lite
-is capable of visualizing as well as Altair. 
+(and therefore Altair) is capable of visualizing.
 
 The Vega-Lite project is more than just a specification. Vega-Lite specs are
 compiled to a more detailed  Vega spec before it is rendered. The Vega-Lite
@@ -135,9 +135,9 @@ D3][d3-trouble] by Ian Johnson.
 Time for a recap! Altair is a Python library which outputs Vega-Lite
 specifications (JSON). Vega-Lite is a high level visualization grammar. The
 Vega-Lite spec is compiled into a more verbose Vega specification (JSON) which
-completely describes the visualization in terms of it's visual elements. The
+completely describes the visualization in terms of its visual elements. The
 Vega spec is then rendered in the browser using JavaScript libraries such as D3
-as it's visualization kernel. 
+as its visualization kernel. 
 
 <img
     src="/assets/images/vega-stack/04-stack-labels.svg"
@@ -182,7 +182,7 @@ a wonderful quote
 > I'm using it every day.” -- Leland Wilkinson
 
 Whoa! Remember Wilkinson from earlier?!  It is really amazing to listen in on (and contribute to) the developments
-of the Vega/Vega-Lite projects in real time. The comments and concerns voiced, have provided me with a 
+of the Vega/Vega-Lite projects in real time. The comments and concerns voiced have provided me with a 
 much deeper understanding the process of visualization. 
 
 Time next time, 
