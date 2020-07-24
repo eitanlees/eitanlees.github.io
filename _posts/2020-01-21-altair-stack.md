@@ -97,7 +97,7 @@ This is where I start to get uncomfortable. Vega specs are much more detailed.
 They are still JSON files which means they are easily read but some of the high
 level Vega-Lite constructs aren't provided. You have to specify every component
 of the visualization. The Vega specs are actually much closer to Wilkinson's
-detailed visualization grammar. The benifet of a detailed description is that
+detailed visualization grammar. The benefit of a detailed description is that
 you have more flexibility. 
 
 From the [Vega docs][vega-quote-link]:
