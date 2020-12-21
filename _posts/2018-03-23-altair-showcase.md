@@ -31,25 +31,22 @@ Note: All examples link to the source code.
     }
   },
   "data": {
-    "url": "https://vega.github.io/vega-datasets/data/iris.json",
+    "url": "https://vega.github.io/vega-datasets/data/cars.json",
     "format": {
       "type": "json"
     }
   },
   "mark": "point",
   "encoding": {
-    "color": {
-      "type": "nominal",
-      "field": "species"
-    },
-    "x": {
-      "type": "quantitative",
-      "field": "petalWidth"
-    },
-    "y": {
-      "type": "quantitative",
-      "field": "petalLength"
-    }
+      "color": {"type": "nominal", "field": "Origin"},
+    "tooltip": [
+      {"type": "nominal", "field": "Name"},
+      {"type": "nominal", "field": "Origin"},
+      {"type": "quantitative", "field": "Horsepower"},
+      {"type": "quantitative", "field": "Miles_per_Gallon"}
+    ],
+    "x": {"type": "quantitative", "field": "Horsepower"},
+    "y": {"type": "quantitative", "field": "Miles_per_Gallon"}
   },
   "$schema": "https://vega.github.io/schema/vega-lite/v2.json"
 }
@@ -95,32 +92,16 @@ Note: All examples link to the source code.
 
 {% capture hist-spec %}
 {
-  "config": {
-    "view": {
-      "width": 400,
-      "height": 300
-    }
-  },
+  "config": {"view": {"continuousWidth": 400, "continuousHeight": 300}},
   "data": {
-    "url": "https://vega.github.io/vega-datasets/data/movies.json",
-    "format": {
-      "type": "json"
-    }
+    "url": "https://cdn.jsdelivr.net/npm/vega-datasets@v1.29.0/data/movies.json"
   },
   "mark": "bar",
   "encoding": {
-    "x": {
-      "type": "quantitative",
-      "bin": true,
-      "field": "IMDB_Rating"
-    },
-    "y": {
-      "type": "quantitative",
-      "aggregate": "count",
-      "field": "*"
-    }
+    "x": {"type": "quantitative", "bin": true, "field": "IMDB_Rating"},
+    "y": {"type": "quantitative", "aggregate": "count"}
   },
-  "$schema": "https://vega.github.io/schema/vega-lite/v2.json"
+  "$schema": "https://vega.github.io/schema/vega-lite/v4.8.1.json"
 }
 {% endcapture %}
 {% include vega-plot.html name='hist' spec=hist-spec%}
@@ -140,7 +121,7 @@ Plot**](https://altair-viz.github.io/gallery/multifeature_scatter_plot.html):
     }
   },
   "data": {
-    "url": "https://vega.github.io/vega-datasets/data/iris.json"
+    "url": "https://cdn.jsdelivr.net/npm/vega-datasets@v1.29.0/data/iris.json"
   },
   "encoding": {
     "color": {
