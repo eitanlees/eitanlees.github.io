@@ -189,7 +189,7 @@ plt.hist(samples, bins=50);
 
 **Numpy Random**
 
-If you are only interested in random variate samples sometimes it is easier to use the `numpy.random` module ([See numpy docs](https://docs.scipy.org/doc/numpy/reference/routines.random.html)) which also contains many distributions. By setting the seed we can create the same results as above
+If you are only interested in random variate samples sometimes it is easier to use the `numpy.random` module ([See numpy docs](https://numpy.org/doc/stable/reference/random/index.html)) which also contains many distributions. By setting the seed we can create the same results as above
 
 
 ```python

@@ -20,7 +20,7 @@ Note: All examples link to the source code.
 
 ## Basic Charts
 
-[**Simple Scatter Plot**](https://altair-viz.github.io/gallery/simple_scatter.html):
+[**Simple Scatter Plot**](https://altair-viz.github.io/gallery/scatter_tooltips.html):
 
 {% capture scatter-spec %}
 {
@@ -56,7 +56,7 @@ Note: All examples link to the source code.
 {% endcapture %}
 {% include vega-plot.html name='scatter' spec=scatter-spec%}
 
-[**Multi Series Line Chart**](https://altair-viz.github.io/gallery/mutli_series_line.html):
+[**Multi Series Line Chart**](https://altair-viz.github.io/gallery/multi_series_line.html):
 
 {% capture stock-spec %}{
   "config": {
@@ -91,7 +91,7 @@ Note: All examples link to the source code.
 {% endcapture %}
 {% include vega-plot.html name='stock' spec=stock-spec%}
 
-[**Histogram**](https://altair-viz.github.io/gallery/histogram.html):
+[**Histogram**](https://altair-viz.github.io/gallery/simple_histogram.html):
 
 {% capture hist-spec %}
 {

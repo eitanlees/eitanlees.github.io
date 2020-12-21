@@ -42,7 +42,7 @@ helped.
 I  enjoyed this write up about setting up a Jekyll blog. At the time of writing this post Brian's
 website is also using the Minima theme which was a great reference point.
 
-- [Simple Jekyll tutorial with Github Pages](https://briancaffey.github.io/2016/03/17/jekyll-tutorial.html) by Brian Caffey
+- [Simple Jekyll tutorial with Github Pages](https://web.archive.org/web/20200811074905/https://briancaffey.github.io/2016/03/17/jekyll-tutorial.html) by Brian Caffey
 
 
 I enjoyed this set of videos going into the specifics about using Jekyll.
