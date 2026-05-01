@@ -39,7 +39,8 @@ plugins:
   - jemoji
   - jekyll-archives
   - jekyll-target-blank
-
+sass:
+  quiet_deps: true
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
 # to override the default setting.
