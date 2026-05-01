@@ -5,5 +5,6 @@ _site
 # Jupyter Notebook
 .ipynb_checkpoints
 .nbgrader.log
+.DS_Store
 
 _drafts/
