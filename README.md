@@ -80,7 +80,7 @@ notebooks/scipy-stats_files/
 This process is still a undocumented and I plan to come back to better
 explain the process.
 
-To convert the notebook to markdow I ran 
+To convert the notebook to markdown I ran
 
 ```bash
 jupyter nbconvert --to markdown nump-poly-fit-redux.ipynb 
@@ -100,11 +100,11 @@ Remove the h1 header from the markdown as well.
 
 Make sure the banner image is the first element after the config to have it show up in the feed.
 
-Then I went through the markdown manually and cleaned some things up. 
+Then I went through the markdown manually and cleaned some things up.
 
 - Adjust the image paths for the figures
-- Remove the plotting object line after a plottting cells.
-- Check the mathematis and cleang things up as needed.
+- Remove the plotting object line after a plotting cells.
+- Check the mathematics and cleaning things up as needed.
 
 ## Minimal Post Template
 
