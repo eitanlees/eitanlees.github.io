@@ -6,6 +6,8 @@ permalink : /numpy-poly-fit/
 
 ![polyfit](/assets/images/poly-header.png)
 
+> Note: This post has been updated. See [Numpy Polynomial Fitting Redux](https://eitanlees.github.io/numpy-poly-fit-redux/)
+
 Given data out in the wild a common task is to fit a polynomial function. Numpy offers some convenient functions to get the job done. 
 
 
